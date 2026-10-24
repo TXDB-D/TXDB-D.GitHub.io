@@ -1,1 +1,77 @@
-<h1>这是一行测试代码<h1>
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>博客</title>
+</head>
+
+<body>
+
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+
+        <div class="navbar-links">
+            <a href="index.html">首页</a>
+            <a href="about.html">关于</a>
+            <a href="archive.html">归档</a>
+            <a href="contact.html">联系</a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="搜索文章...">
+            <button onclick="searchPosts()">搜索</button>
+        </div>
+    </nav>
+
+    <!-- 主体布局 -->
+    <div class="layout">
+
+        <!-- 左侧导航栏 -->
+        <aside class="sidebar">
+            <h3>分类</h3>
+            <ul>
+                <li><a href="#">前端开发</a></li>
+                <li><a href="#">后端开发</a></li>
+                <li><a href="#">学习笔记</a></li>
+                <li><a href="#">生活随笔</a></li>
+                <li><a href="#">项目记录</a></li>
+            </ul>
+
+            <h3 style="margin-top: 20px;">标签</h3>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </aside>
+
+        <!-- 右侧内容区 -->
+        <main class="content">
+            
+        </main>
+
+    </div>
+
+    <footer>
+        <p>© 2026 博客</p>
+    </footer>
+
+    <script>
+        function searchPosts() {
+            const keyword = document.getElementById("searchInput").value.trim();
+            if (!keyword) {
+                alert("请输入搜索内容");
+                return;
+            }
+            alert("搜索：" + keyword);
+            // 后续可以改成跳转到搜索页，或调用接口
+        }
+    </script>
+
+</body>
+
+</html>
