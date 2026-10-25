@@ -4,54 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta name="description" content="记录技术学习与日常笔记的静态博客">
     <title>博客</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 
     <!-- 顶部导航栏 -->
-    <nav class="navbar">
-
+    <nav class="navbar" aria-label="主导航">
         <div class="navbar-links">
-            <a href="index.html">首页</a>
-            <a href="about.html">关于</a>
+            <a href="index.html" aria-current="page">首页</a>
             <a href="archive.html">归档</a>
-            <a href="contact.html">联系</a>
-        </div>
-
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="搜索文章...">
-            <button onclick="searchPosts()">搜索</button>
         </div>
     </nav>
 
     <!-- 主体布局 -->
     <div class="layout">
 
-        <!-- 左侧导航栏 -->
-        <aside class="sidebar">
-            <h3>分类</h3>
-            <ul>
-                <li><a href="#">前端开发</a></li>
-                <li><a href="#">后端开发</a></li>
-                <li><a href="#">学习笔记</a></li>
-                <li><a href="#">生活随笔</a></li>
-                <li><a href="#">项目记录</a></li>
-            </ul>
-
-            <h3 style="margin-top: 20px;">标签</h3>
-            <ul>
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">JavaScript</a></li>
-                <li><a href="#">Node.js</a></li>
-            </ul>
-        </aside>
-
         <!-- 右侧内容区 -->
         <main class="content">
-            
+        <article class="post">
+            <h2><a href="posts/%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85VScode%E5%B9%B6%E9%85%8D%E7%BD%AE%20C%20C%2B%2B%20%E7%8E%AF%E5%A2%83.html">下载安装VScode并配置 C/C++ 环境</a></h2>
+            <p class="post-meta"><time datetime="2026-10-25">2026-10-25</time></p>
+            <p class="post-desc">写代码时，我们总得运行一下，看看结果是不是和预期一致，这时候就需要用到调试器（Debugger）了。配置的时候，我们不仅要指定好调试器，还得配好编译器。因为代码得先编译成能跑的 .exe 程序，调试器才能运行它，所以每次调试前都得先自动编译一遍。</p>
+        </article>
         </main>
 
     </div>
@@ -59,18 +36,6 @@
     <footer>
         <p>© 2026 博客</p>
     </footer>
-
-    <script>
-        function searchPosts() {
-            const keyword = document.getElementById("searchInput").value.trim();
-            if (!keyword) {
-                alert("请输入搜索内容");
-                return;
-            }
-            alert("搜索：" + keyword);
-            // 后续可以改成跳转到搜索页，或调用接口
-        }
-    </script>
 
 </body>
 
